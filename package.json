@@ -1,0 +1,28 @@
+{
+  "name": "npm-cleversafe",
+  "version": "0.0.0",
+  "description": "Request wrapper to make easier interactions with cleversafe instances",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlueChasm/npm-cleversafe.git"
+  },
+  "keywords": [
+    "cleversafe",
+    "s3",
+    "pbject",
+    "storage"
+  ],
+  "author": "Robert Rios <Robert@bluechasm.com> (http://bluechasm.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BlueChasm/npm-cleversafe/issues"
+  },
+  "homepage": "https://github.com/BlueChasm/npm-cleversafe#readme",
+  "dependencies": {
+    "request": "^2.72.0"
+  }
+}
