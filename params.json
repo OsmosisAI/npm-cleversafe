@@ -1,0 +1,6 @@
+{
+  "name": "Npm-cleversafe",
+  "tagline": "npm-cleversafe module",
+  "body": "## Synopsis\r\n\r\nThis is a wrapper around the request module that simplifies the interaction with Cleversafe instances. It makes it easier to set up\r\na proxy in case your cleversafe instance is behind a firewall.\r\n\r\n## Code Example\r\n\r\n~~~ js\r\nvar cleversafe = require('npm-cleversafe')\r\n\r\n\r\n//Create cleversafe instance\r\nvar conn = new cleversafe(USERNAME,PASSWORD,CLEVERSAFE_HOST,PROXY URL)\r\n\r\n//Set the vault we will be working with\r\nconn.setVault(VAULT_NAME)\r\n\r\n//Deposit file in the vault\r\nconn.deposit(\"image.jpg\")\r\n\r\n//Get file from cleversafe. The file will be stored in the local directory\r\nconn.retrieve(\"image.jpg\")\r\n\r\n~~~\r\n\r\n## Motivation\r\n\r\nI decided to create this wrapper since I couldn't find any npm packages that simplified the interactions with cleversafe\r\n\r\n## Installation\r\n\r\n\t$ npm install --save npm-cleversafe\r\n\r\n\r\n## Contributors\r\n\r\nRobert@Bluechasm.com\r\n\r\nFeel free to contact me for suggestions or questions about this package",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Npm-cleversafe : npm-cleversafe module">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Npm-cleversafe</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/BlueChasm/npm-cleversafe">View on GitHub</a>
+
+          <h1 id="project_title">Npm-cleversafe</h1>
+          <h2 id="project_tagline">npm-cleversafe module</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/BlueChasm/npm-cleversafe/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/BlueChasm/npm-cleversafe/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>
+<a id="synopsis" class="anchor" href="#synopsis" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Synopsis</h2>
+
+<p>This is a wrapper around the request module that simplifies the interaction with Cleversafe instances. It makes it easier to set up
+a proxy in case your cleversafe instance is behind a firewall.</p>
+
+<h2>
+<a id="code-example" class="anchor" href="#code-example" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Code Example</h2>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> cleversafe <span class="pl-k">=</span> <span class="pl-c1">require</span>(<span class="pl-s"><span class="pl-pds">'</span>npm-cleversafe<span class="pl-pds">'</span></span>)
+
+
+<span class="pl-c">//Create cleversafe instance</span>
+<span class="pl-k">var</span> conn <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">cleversafe</span>(<span class="pl-c1">USERNAME</span>,<span class="pl-c1">PASSWORD</span>,<span class="pl-c1">CLEVERSAFE_HOST</span>,<span class="pl-c1">PROXY</span> <span class="pl-c1">URL</span>)
+
+<span class="pl-c">//Set the vault we will be working with</span>
+<span class="pl-smi">conn</span>.<span class="pl-en">setVault</span>(<span class="pl-c1">VAULT_NAME</span>)
+
+<span class="pl-c">//Deposit file in the vault</span>
+<span class="pl-smi">conn</span>.<span class="pl-en">deposit</span>(<span class="pl-s"><span class="pl-pds">"</span>image.jpg<span class="pl-pds">"</span></span>)
+
+<span class="pl-c">//Get file from cleversafe. The file will be stored in the local directory</span>
+<span class="pl-smi">conn</span>.<span class="pl-en">retrieve</span>(<span class="pl-s"><span class="pl-pds">"</span>image.jpg<span class="pl-pds">"</span></span>)
+</pre></div>
+
+<h2>
+<a id="motivation" class="anchor" href="#motivation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Motivation</h2>
+
+<p>I decided to create this wrapper since I couldn't find any npm packages that simplified the interactions with cleversafe</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<pre><code>$ npm install --save npm-cleversafe
+</code></pre>
+
+<h2>
+<a id="contributors" class="anchor" href="#contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributors</h2>
+
+<p><a href="mailto:Robert@Bluechasm.com">Robert@Bluechasm.com</a></p>
+
+<p>Feel free to contact me for suggestions or questions about this package</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Npm-cleversafe maintained by <a href="https://github.com/BlueChasm">BlueChasm</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
