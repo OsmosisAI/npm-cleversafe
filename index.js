@@ -1,6 +1,7 @@
 module.exports = Cleversafe;
 
 var request = require('request');
+var parseString = require('xml2js').parseString;
 var fs = require("fs");
 
 function Cleversafe (usr,pswd,host,p){
@@ -68,4 +69,97 @@ Cleversafe.prototype.retrieve = function(filename){
 	}
 
 	request(options, callback).pipe(fs.createWriteStream(filename))
+}
+
+
+Cleversafe.prototype.vaultList = function(cb){
+
+
+	var options = {
+	url: this.cHost,
+	proxy:this.proxy,
+	port: 80,
+	method: 'GET',
+
+	headers: {
+	'Authorization':this.auth,
+	'User-Agent': 'npm-Cleversafe'
+	}
+	};
+
+
+	function callback(error, response, body) {
+	if (error) {
+		console.log(error)
+	}
+
+	
+	
+	parseString(body, function (err, result) {
+	    cb(result);
+	});
+		
+
+	}
+
+	request(options, callback)
+}
+
+
+Cleversafe.prototype.objectList = function(cb){
+
+
+	var options = {
+	url: this.cHost+'/'+this.vault,
+	proxy:this.proxy,
+	port: 80,
+	method: 'GET',
+
+	headers: {
+	'Authorization':this.auth,
+	'User-Agent': 'npm-Cleversafe'
+	}
+	};
+
+
+	function callback(error, response, body) {
+	if (error) {
+		console.log(error)
+	}
+
+	
+	
+	parseString(body, function (err, result) {
+	    cb(result);
+	});
+		
+
+	}
+
+	request(options, callback)
+}
+
+Cleversafe.prototype.delete = function(filename){
+
+
+	var options = {
+	url: this.cHost+'/'+this.vault+'/'+filename,
+	proxy:this.proxy,
+	port: 80,
+	method: 'DELETE',
+	headers: {
+	'Authorization':this.auth,
+	'User-Agent': 'npm-Cleversafe'
+	}
+	};
+
+
+	function callback(error, response, body) {
+	if (error) {
+		console.log(error)
+	}
+
+	}
+
+	request(options, callback)
 }

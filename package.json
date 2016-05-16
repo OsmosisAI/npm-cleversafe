@@ -1,6 +1,6 @@
 {
   "name": "npm-cleversafe",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Request wrapper to make easier interactions with cleversafe instances",
   "main": "index.js",
   "scripts": {
@@ -13,7 +13,7 @@
   "keywords": [
     "cleversafe",
     "s3",
-    "pbject",
+    "object",
     "storage"
   ],
   "author": "Robert Rios <Robert@bluechasm.com> (http://bluechasm.com)",
@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/BlueChasm/npm-cleversafe#readme",
   "dependencies": {
-    "request": "^2.72.0"
+    "request": "^2.72.0",
+    "xml2js": "^0.4.16"
   }
 }
