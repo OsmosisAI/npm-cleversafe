@@ -1,6 +1,6 @@
 {
   "name": "npm-cleversafe",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Request wrapper to make easier interactions with cleversafe instances",
   "main": "index.js",
   "scripts": {
