@@ -44,6 +44,7 @@ I decided to create this wrapper since I couldn't find any npm packages that sim
 
 ## Contributors
 
-Robert@Bluechasm.com
+robert@bluechasm.com
+ryan@bluechasm.com
 
-Feel free to contact me for suggestions or questions about this package
+Feel free to contact us for suggestions or questions about this package
